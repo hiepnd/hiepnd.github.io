@@ -1,4 +1,4 @@
-title: Ngo Duc Hiep
+title: Recent research
 description: My Personal Stack Problems
 author: Ngo Duc Hiep
 github: https://github.com/hiepnd
@@ -32,10 +32,17 @@ share:
   fb_appid: 1749788565247320
 
 urls:
-    - text: About Me
+    - text: Introduction
       url: /about/
-    - text: My Projects
+    - text: Research interests
+      url: /about/
+    - text: Projects
       url: /projects/
+    - text: Publications
+      url: /projects/
+    - text: Awards
+      url: /projects/
+    
     #- text: XML Feed
     #  url: /feed.xml
 
