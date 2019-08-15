@@ -1,45 +1,362 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nguyen Dinh Hung</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-<div id="home">
-  <h1>{{ site.title }}</h1>
-  <hr />
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <ol class="posts">
-    {% for post in paginator.posts %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a> &raquo; <i><span>{{ post.date | date_to_string }}</span></i></li>
-    {% endfor %}
-  </ol>
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Pagination links -->
-  {% if paginator.total_pages > 1 %}
-    <ul class="pagination pagination-sm">
-      {% if paginator.previous_page %}
-        <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a></li>
-      {% else %}
-        <li class="disabled"><span aria-hidden="true">&laquo;</span></li>
-      {% endif %}
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-      <li><a href="/">First</a></li>
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
 
-      {% for page in (1..paginator.total_pages) %}
-        {% if page == paginator.page %}
-          <li class="active"><a>{{ page }}<span class="sr-only">(current)</span></a></li>
-        {% elsif page == 1 %}
-          <li><a href="/">{{ page }}</a></li>
-        {% else %}
-          <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
-        {% endif %}
-      {% endfor %}
+  <!-- =======================================================
+    Theme Name: DevFolio
+    Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
 
-      <li><a href="/page/{{ paginator.total_pages }}/">Last</a></li>
+<body id="page-top">
 
-      {% if paginator.next_page %}
-        <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a></li>
-      {% else %}
-        <li class="disabled"><span>&raquo;</span></li>
-      {% endif %}
-    </ul>
-  {% endif %}
-</div><!-- end #home -->
+  <!--/ Nav Star /-->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll" href="#page-top"></a>
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+
+          <!-- <li class="nav-item">
+            <a class="nav-link js-scroll active" href="#home">Home</a>
+          </li>
+           -->
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#background">Background</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#academic">Academic</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#articles">Articles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#references">References</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll" href="#external-links">External Links</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--/ Nav End /-->
+
+  <!--/ Intro Skew Star /-->
+  <!-- <div id="home" class="intro route bg-image" style="background-image: url(img/intro-bg.jpg)">
+    <div class="overlay-itro"></div>
+    <div class="intro-content display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h1 class="intro-title mb-4">I am Morgan Freeman</h1>
+          <p class="intro-subtitle"><span class="text-slider-items">CEO DevFolio,Web Developer,Web Designer,Frontend Developer,Graphic Designer</span><strong class="text-slider"></strong></p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!--/ Intro Skew End /-->
+
+  <section id="about" class="about-mf sect-pt4 route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="about-img">
+                      <img src="img/hung.jpg" class="img-fluid rounded b-shadow-a" alt="">
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info">
+                      <p><span class="title-s">Name: </span> <span>Nguyen Dinh Hung</span></p>
+                      <p><span class="title-s">Profile: </span> <span>Giao su dai hoc</span></p>
+                      <p><span class="title-s">Email: </span> <span>hung@hust.vn</span></p>
+                      <p><span class="title-s">Phone: </span> <span>(617) 557-0089</span></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="skill-mf">
+                  <p class="title-s">Skill</p>
+                  <span>HTML</span> <span class="pull-right">85%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>CSS3</span> <span class="pull-right">75%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>PHP</span> <span class="pull-right">50%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>JAVASCRIPT</span> <span class="pull-right">90%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                </div> -->
+              </div>
+              <div class="col-md-6">
+                <div class="about-me pt-4 pt-md-0">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      About me
+                    </h5>
+                  </div>
+                  <p class="">
+                    Ignacio J. Pérez Arriaga (Madrid, 1948) is a Spanish professor of Engineering, Economics and Regulation of the Electric Power Sector, currently at the Massachusetts Institute of Technology (MIT, United States) and the ICAI School of Engineering (Comillas Pontifical University, Spain). He is a life member of the Royal Academy of Engineering of Spain. He has been a major contributor across the spectrum of electric power systems, from system dynamic analysis, monitoring and diagnosis at the start of his academic career, to economic and regulatory analysis.
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="background" class="services-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 box-shadow-full">
+          <div class="title-box text-left">
+            <h5 class="title-left">
+              Background
+            </h5>
+          </div>
+
+          <p class="">
+            
+            Pérez-Arriaga was born in Madrid and went on to graduate as Electrical Engineer from the ICAI School of Engineering. He earned an M.S. and a Ph.D. in Electrical Engineering, both from the Massachusetts Institute of Technology in 1978 and 1981 respectively. After completing his Ph.D., Pérez-Arriaga became Professor at the ICAI School of Engineering. In 1984 he founded the Institute for Research in Technology (IIT) at Comillas Pontifical University, being its Director until 1994. Since 2009 he rejoined the MIT (Electrical Engineering and Computer Science Department), where among other activities he teaches the graduate course “Engineering, Economics and Regulation of the Electric Power Sector”. He is also Director of Training at the Florence School of Regulation European University Institute in Florence, Italy. Beyond his role as professor, he has played an active role in the liberalization process of the electric power sector, not only in the implementation of the European Internal Market for Electricity, being one of the precursors of the Electricity Regulatory Forum (Florence) of the European Commission but also in the Latin American context (President of the Advisory Council of the Central American Electricity Market until 2005). He served as Commissioner in the Spanish Electricity Regulatory Commission (1995-2000) and later as Independent Member of the Single Electricity Market Committee of Ireland (2007-2012). Currently he is Member of the Board of Appeal of the Agency for the Coordination of Energy Regulators (ACER) in the EU, and Review Editor of the 5th Assessment Report of the Intergovernmental Panel on Climate Change (IPCC). He has also rendered consultant services for governments and regulatory authorities, international institutions, industrial associations and utilities in over 30 countries.
+
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="academic" class="services-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 box-shadow-full">
+          <div class="title-box text-left">
+            <h5 class="title-left">
+              Relevant academic contributions
+            </h5>
+          </div>
+
+          <p class="">
+            
+            The research activity of Pérez-Arriaga has been focused on the analysis of electric power systems, but it has been in permanent evolution. Through different stages, his research interests have included modeling, control and stability analysis of power systems; optimization of expansion and operation of power generation systems; transmission and distribution of electricity; and electricity sector regulation including issues related to transport, supply security, the design of regional wholesale markets and rates and, more recently, the sustainability of energy models and universal access to energy.
+
+          </p>
+
+          <b>Mid-1970s to mid-1980s: Power systems control and stability analysis</b>
+
+          <p class="">
+            
+            His contributions in the field of electrical engineering began with the completion of his PhD at MIT under the supervision of Prof. Fred Schweppe, in which he formulated a new technique for the dynamic analysis of small perturbations of electric power systems known as Selective Modal Analysis.[1] This analytical framework allows approaching large and complex linear time-invariant dynamic system problems (such as dynamic stability analysis, or the determination of coherent generator groups and dynamic equivalents in transient stability studies) through a reduction technique that extracts the relevant quantitative and qualitative information. This framework was later applied intensively to solve different power system stability and control problems, such as the analysis of the oscillatory stability and control,[2] subsynchronous resonance or multi-area analysis of small signal stability.
+
+          </p>
+
+          <b>Mid-1980s to mid-1990s: Models for power systems and industrial applications</b>
+
+          <p class="">
+            
+            In the late 1980s and early 1990s, his research was focused on the development of new algorithms and methodologies to support the operation and planning of electric power systems. Among other contributions, he developed pioneering models for computation of spot prices in interconnected power systems and decomposition approaches to tackle optimal reactive power planning problems.[4] During this period he also contributed to computer-aided optimization design of electrical machines and other industrial equipment and to the development of expert systems with applications to the design and incipient default detection in industrial systems.
+
+          </p>
+
+          <b>Mid-1990s to mid-2010s: Economics and regulation of electric power systems and markets</b>
+
+          <p class="">
+            
+            In the early 1990s, in the context of the Argentinean power sector restructuring, he began working on the analysis of the best regulatory methodologies for pricing power transmission services, formulating the principle of beneficiary pays for network cost allocation. Since then, he has devoted a major part of his research activities to the regulation and restructuring of the power industry.
+
+He carried on with the seminal works of his mentor Prof. Schweppe on marginal pricing theories applied to power systems; on the generation side, he formulated the foundation for wholesale pricing considering generation operation and planning constraints[5] and identifying the reasons for mismatches in capital cost recovery with marginal generation prices. On the transmission side, he demonstrated why marginal prices fail to recover the total incurred network costs.[6] Later on, he added major contributions to the security of supply debate, formulating in the context of the redesign of the Colombian capacity payments mechanism in 1999 the reliability options mechanism,[7] the base of the capacity auction mechanisms later implemented in Colombia and New England. He has also worked intensively on the regulatory design of regional markets (both in Central America and in European Union) as well as on end-user tariff design. In 2013 he edited the book “Regulation of the Power Sector” (Springer-Verlag), used as textbook in his MIT course as well as in the annual training program for energy regulators of the Florence School of Regulation of the European University Institute.
+
+Currently he is Principal Investigator of the Comillas University - Massachusetts Institute of Technology Electricity Systems Program. He was the principal investigator of the MIT Utility of the Future study, published in 2016.
+
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="articles" class="services-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 box-shadow-full">
+          <div class="title-box text-left">
+            <h5 class="title-left">
+              Articles
+            </h5>
+          </div>
+          
+          <ol>
+            <li>
+              "Selective Modal Analysis with Application to Electric Power Systems, Part I: Heuristic Introduction", IEEE Transactions on Power Apparatus and Systems, Vol. PAS-101, no.9, September 1982, pp. 3117–3125 (co-authors: G.C. Verghese and F.C. Schweppe).
+            </li>
+            <li>
+              "JUANAC: A model for computation of spot prices in interconnected power systems", 10th PSCC Conference, Graz. Austria, Aug. 1989 (co-authors: M. Rivier and G. Luengo).
+            </li>
+            <li>
+              "A security constrained decomposition approach to optimal reactive power planning", IEEE Transactions on Power Systems, vol. 6, no. 2, August 1991, pp. 1069–1076 (co-authors: T. Gómez, J. Lumbreras and V.M. Parra).
+            </li>
+            <li>
+              "On sensitivities, Residues and Participations. Applications to Oscillatory Stability Analysis and Control", IEEE Transactions on Power Systems, vol. PWRS-4, no. 1, February 1989, pp. 278–285 (co-authors: F. Luis Pagola, George C. Verghese).
+            </li>
+            <li>
+              "Multi-area analysis of small signal stability in large electric power systems by SMA", IEEE Transactions on Power Systems. vol. PWRS 8, no. 3, pp. 1257–1265, Agosto 1993 (co-authors: F. L. Rouco).
+            </li>
+            <li>
+              ”Wholesale marginal prices in competitive generation markets”, IEEE Transactions on Power Systems, May 1997, vol. 12, no. 2. (Co-author: Claudia Meseguer Velasco).
+            </li>
+          </ol>
+
+          
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="references" class="services-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 box-shadow-full">
+          <div class="title-box text-left">
+            <h5 class="title-left">
+              References
+            </h5>
+          </div>
+
+          <ol>
+            <li>
+              "Selective Modal Analysis with Application to Electric Power Systems, Part I: Heuristic Introduction", IEEE Transactions on Power Apparatus and Systems, Vol. PAS-101, no.9, September 1982, pp. 3117–3125 (co-authors: G.C. Verghese and F.C. Schweppe).
+            </li>
+            <li>
+              "JUANAC: A model for computation of spot prices in interconnected power systems", 10th PSCC Conference, Graz. Austria, Aug. 1989 (co-authors: M. Rivier and G. Luengo).
+            </li>
+            <li>
+              "A security constrained decomposition approach to optimal reactive power planning", IEEE Transactions on Power Systems, vol. 6, no. 2, August 1991, pp. 1069–1076 (co-authors: T. Gómez, J. Lumbreras and V.M. Parra).
+            </li>
+            <li>
+              "On sensitivities, Residues and Participations. Applications to Oscillatory Stability Analysis and Control", IEEE Transactions on Power Systems, vol. PWRS-4, no. 1, February 1989, pp. 278–285 (co-authors: F. Luis Pagola, George C. Verghese).
+            </li>
+            <li>
+              "Multi-area analysis of small signal stability in large electric power systems by SMA", IEEE Transactions on Power Systems. vol. PWRS 8, no. 3, pp. 1257–1265, Agosto 1993 (co-authors: F. L. Rouco).
+            </li>
+            <li>
+              ”Wholesale marginal prices in competitive generation markets”, IEEE Transactions on Power Systems, May 1997, vol. 12, no. 2. (Co-author: Claudia Meseguer Velasco).
+            </li>
+          </ol>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="external-links" class="services-mf route">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 box-shadow-full">
+          <div class="title-box text-left">
+            <h5 class="title-left">
+              External Links
+            </h5>
+          </div>
+
+          <ol>
+            <li>
+              "Selective Modal Analysis with Application to Electric Power Systems, Part I: Heuristic Introduction", IEEE Transactions on Power Apparatus and Systems, Vol. PAS-101, no.9, September 1982, pp. 3117–3125 (co-authors: G.C. Verghese and F.C. Schweppe).
+            </li>
+            <li>
+              "JUANAC: A model for computation of spot prices in interconnected power systems", 10th PSCC Conference, Graz. Austria, Aug. 1989 (co-authors: M. Rivier and G. Luengo).
+            </li>
+            <li>
+              "A security constrained decomposition approach to optimal reactive power planning", IEEE Transactions on Power Systems, vol. 6, no. 2, August 1991, pp. 1069–1076 (co-authors: T. Gómez, J. Lumbreras and V.M. Parra).
+            </li>
+            <li>
+              "On sensitivities, Residues and Participations. Applications to Oscillatory Stability Analysis and Control", IEEE Transactions on Power Systems, vol. PWRS-4, no. 1, February 1989, pp. 278–285 (co-authors: F. Luis Pagola, George C. Verghese).
+            </li>
+            <li>
+              "Multi-area analysis of small signal stability in large electric power systems by SMA", IEEE Transactions on Power Systems. vol. PWRS 8, no. 3, pp. 1257–1265, Agosto 1993 (co-authors: F. L. Rouco).
+            </li>
+            <li>
+              ”Wholesale marginal prices in competitive generation markets”, IEEE Transactions on Power Systems, May 1997, vol. 12, no. 2. (Co-author: Claudia Meseguer Velasco).
+            </li>
+          </ol>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+   
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/popper/popper.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/counterup/jquery.waypoints.min.js"></script>
+  <script src="lib/counterup/jquery.counterup.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/typed/typed.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
